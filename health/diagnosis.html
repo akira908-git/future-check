@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>診断スタート | Future Me</title>
+  <link rel="stylesheet" href="diagnosis.css" />
+</head>
+<body>
+  <h1>未来の自分をチェック！</h1>
+  <form id="diagnosisForm">
+    <div class="question-list">
+      <label><input type="checkbox" name="q1" /> 朝食を抜くことが多い</label>
+      <label><input type="checkbox" name="q2" /> 睡眠時間が6時間未満</label>
+      <label><input type="checkbox" name="q3" /> 運動はほとんどしていない</label>
+      <label><input type="checkbox" name="q4" /> 夜中にスマホを長時間見てしまう</label>
+      <label><input type="checkbox" name="q5" /> 野菜をあまり食べない</label>
+      <label><input type="checkbox" name="q6" /> 間食が多い</label>
+      <label><input type="checkbox" name="q7" /> 水をほとんど飲まない</label>
+      <label><input type="checkbox" name="q8" /> 週1回以上、深夜まで起きている</label>
+      <label><input type="checkbox" name="q9" /> ストレスを感じやすい</label>
+      <label><input type="checkbox" name="q10" /> 部屋の片付けが苦手</label>
+    </div>
+    <button type="button" onclick="goToResult()">診断する</button>
+  </form>
+
+  <script src="diagnosis.js"></script>
+</body>
+</html>
