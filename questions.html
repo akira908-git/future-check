@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>無料健康自己チェック（10項目）</title>
+  <link rel="stylesheet" href="questions.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">🌟 みらチェケ 〜みらいのカラダちぇっく〜</div>
+    <nav>
+       <ul>
+        <li><a href="index.html">TOP</a></li>
+        <li><a href="questions.html">診断テスト</a></li>
+        <li><a href="result.html">あなたの結果</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>無料健康自己チェック（10項目）</h1>
+
+    <p class="intro">
+      あなたの生活習慣が、今の健康状態にどんな影響を与えているのか見てみましょう。<br />
+      これは診断ではなく、あなたの「現在地」を知るための簡単なチェックです。<br />
+      正直に、リラックスして答えてみてください。
+    </p>
+    <p class="note">
+      ※ 各項目には「最低限ライン」の目安を記載しています。<br />
+      回答は「以下」「最低限ライン」「以上」の3つの中から選んでください。
+    </p>
+
+    <form id="healthForm">
+      <!-- 質問1〜10 -->
+      <div class="question">
+        <p>1. 最近の平均睡眠時間は1日何時間ですか？</p>
+        <label><input type="radio" name="q1" value="below" required />以下（6時間未満）</label>
+        <label><input type="radio" name="q1" value="standard" />最低限ライン（6〜8時間）</label>
+        <label><input type="radio" name="q1" value="above" />以上（8時間以上）</label>
+      </div>
+      <div class="question">
+        <p>2. 最近1週間の合計運動時間はどれくらいですか？</p>
+        <label><input type="radio" name="q2" value="below" required />以下（30分未満）</label>
+        <label><input type="radio" name="q2" value="standard" />最低限ライン（30分〜2時間）</label>
+        <label><input type="radio" name="q2" value="above" />以上（2時間以上）</label>
+      </div>
+      <div class="question">
+        <p>3. 最近1日に歩く時間はどれくらいですか？</p>
+        <label><input type="radio" name="q3" value="below" required />以下（15分未満）</label>
+        <label><input type="radio" name="q3" value="standard" />最低限ライン（15〜30分）</label>
+        <label><input type="radio" name="q3" value="above" />以上（30分以上）</label>
+      </div>
+      <div class="question">
+        <p>4. 最近1日に食べる野菜の量はどれくらいですか？</p>
+        <label><input type="radio" name="q4" value="below" required />以下（100g未満）</label>
+        <label><input type="radio" name="q4" value="standard" />最低限ライン（100g〜200g）</label>
+        <label><input type="radio" name="q4" value="above" />以上（200g以上）</label>
+      </div>
+      <div class="question">
+        <p>5. 最近の食欲はどうですか？</p>
+        <label><input type="radio" name="q5" value="below" required />以下（少ない）</label>
+        <label><input type="radio" name="q5" value="standard" />最低限ライン（普通）</label>
+        <label><input type="radio" name="q5" value="above" />以上（多い）</label>
+      </div>
+      <div class="question">
+        <p>6. 最近の疲れやすさはどうですか？</p>
+        <label><input type="radio" name="q6" value="below" required />以下（疲れやすい）</label>
+        <label><input type="radio" name="q6" value="standard" />最低限ライン（普通）</label>
+        <label><input type="radio" name="q6" value="above" />以上（疲れにくい）</label>
+      </div>
+      <div class="question">
+        <p>7. 最近の気分の良さはどうですか？</p>
+        <label><input type="radio" name="q7" value="below" required />以下（あまり良くない）</label>
+        <label><input type="radio" name="q7" value="standard" />最低限ライン（普通）</label>
+        <label><input type="radio" name="q7" value="above" />以上（良い）</label>
+      </div>
+      <div class="question">
+        <p>8. 最近、気持ちが落ち込む頻度はどれくらいですか？</p>
+        <label><input type="radio" name="q8" value="below" required />以下（よくある）</label>
+        <label><input type="radio" name="q8" value="standard" />最低限ライン（たまにある）</label>
+        <label><input type="radio" name="q8" value="above" />以上（ほとんどない）</label>
+      </div>
+      <div class="question">
+        <p>9. 最近の集中力や記憶力の調子はどうですか？</p>
+        <label><input type="radio" name="q9" value="below" required />以下（悪い）</label>
+        <label><input type="radio" name="q9" value="standard" />最低限ライン（普通）</label>
+        <label><input type="radio" name="q9" value="above" />以上（良い）</label>
+      </div>
+      <div class="question">
+        <p>10. 最近の体調の良さはどうですか？</p>
+        <label><input type="radio" name="q10" value="below" required />以下（あまり良くない）</label>
+        <label><input type="radio" name="q10" value="standard" />最低限ライン（普通）</label>
+        <label><input type="radio" name="q10" value="above" />以上（良い）</label>
+      </div>
+
+      <!-- ジェンダー -->
+      <div class="question">
+        <p>あなたの性を選択してください</p>
+        <label><input type="radio" name="gender" value="male" required />男性</label>
+        <label><input type="radio" name="gender" value="female" />女性</label>
+        <label><input type="radio" name="gender" value="other" />その他</label>
+      </div>
+
+      <!-- 年代 -->
+      <div class="question">
+        <label for="generation">年代を選択してください</label>
+        <select id="generation" name="generation" required>
+          <option value="">--選択してください--</option>
+          <option value="10s">10代</option>
+          <option value="20s">20代</option>
+          <option value="30s">30代</option>
+          <option value="40s">40代</option>
+          <option value="50s">50代</option>
+          <option value="60s">60代</option>
+          <option value="70s">70代</option>
+          <option value="80s">80代</option>
+        </select>
+      </div>
+
+      <!-- 体型 -->
+      <div class="question">
+        <p>あなたの現在の体型を教えてください</p>
+        <label><input type="radio" name="bodyType" value="slim" required />やせ型</label>
+        <label><input type="radio" name="bodyType" value="normal" />普通体型</label>
+        <label><input type="radio" name="bodyType" value="overweight" />ぽっちゃり・太り気味</label>
+      </div>
+
+      <button type="submit">結果を見る</button>
+    </form>
+  </div>
+
+  <p class="disclaimer">
+    ※ 本アンケートは健康に関する自己評価を目的としたものであり、診断や治療を目的としたものではありません。<br />
+    健康に関する具体的な相談や診断は、医療機関の専門家にご相談ください。
+  </p>
+
+  <!-- フッター -->
+  <footer>
+    <nav>
+      <ul class="footer-links">
+        <li><a href="privacy.html">プライバシーポリシー</a></li>
+        <li><a href="terms.html">利用規約</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2025 みらチェケ</p>
+  </footer>
+
+  <script src="questions.js"></script>
+</body>
+</html>

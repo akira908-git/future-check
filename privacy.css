@@ -1,0 +1,122 @@
+/* フォントと全体のベース設定 */
+body {
+  font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Arial", sans-serif;
+  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  margin: 0;
+  padding: 0;
+  color: #333;
+  min-height: 100vh;
+}
+
+/* ヘッダー */
+header {
+  background-color: #2e8b57; /* 落ち着いた健康グリーン */
+  color: #fff;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  user-select: none;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.15));
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #e0f2f1;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+  color: #a7ffeb;
+  outline: none;
+}
+
+/* メインコンテナ */
+.container {
+  max-width: 600px;
+  background: #ffffffdd;
+  margin: 30px auto 60px;
+  padding: 30px 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* 見出し */
+h2 {
+  font-size: 2rem;
+  color: #2a6ebb;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #2a6ebb;
+  padding-bottom: 0.3rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  color: #2a6ebb;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+}
+
+/* 段落 */
+p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* リストがある場合 */
+ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  list-style-type: disc;
+  color: #555;
+}
+
+footer {
+  background-color: #2a6ebb;
+  color: #fff;
+  padding: 15px 20px;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 0.9rem;
+  border-radius: 0 0 8px 8px;
+}
+
+.footer-links {
+  list-style: none;
+  margin-bottom: 8px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-links li a:hover {
+  text-decoration: underline;
+}
+

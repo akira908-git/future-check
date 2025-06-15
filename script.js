@@ -1,3 +1,4 @@
 function goToDiagnosis() {
-  window.location.href = "diagnosis.html";
+  window.location.href = "questions.html";
 }
+

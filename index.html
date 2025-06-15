@@ -2,21 +2,59 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Future Me</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>みらちぇけ - 未来の自分をチェック</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Future Me</h1>
-  <div class="description">
-    このアプリはあなたの生活習慣から、<br />
-    未来の自分の姿を診断する「AI診断カード」です。<br /><br />
-    結果はユーモアと気づきを目的としており、<br />
-    他人との比較や評価を目的としたものではありません。<br /><br />
-    楽しみながら、よりよい未来を目指しましょう。
-  </div>
-  <button onclick="goToDiagnosis()">診断スタート</button>
+
+  <!-- ヘッダー -->
+  <header>
+    <div class="logo">🌟 みらチェケ 〜みらいのカラダちぇっく〜</div>
+    <nav>
+       <ul>
+        <li><a href="index.html">TOP</a></li>
+        <li><a href="questions.html">診断テスト</a></li>
+        <li><a href="result.html">あなたの結果</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ヒーローセクション -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>未来の自分を、最高にカッコよくしよう！</h1>
+        <p>
+        ちょっと歩くだけ。少し気をつけるだけ。<br />
+        その“小さな一歩”が、未来のカラダを変えていく！<br />
+        さあ今こそ、自分史上いちばん元気なわたしを目指そう！<br />
+        未来の自分が、今のあなたに感謝する日が来る。
+        </p>
+
+      <button onclick="goToDiagnosis()">テストを受ける</button>
+    </div>
+    <div class="hero-image">
+      <img src="images/future_self.png" alt="未来の自分" />
+    </div>
+  </section>
+
+  <p class="disclaimer">
+    ※ 本アンケートは健康に関する自己評価を目的としたものであり、診断や治療を目的としたものではありません。<br />
+    健康に関する具体的な相談や診断は、医療機関の専門家にご相談ください。
+  </p>
+
+  <!-- フッター -->
+  <footer>
+    <nav>
+      <ul class="footer-links">
+        <li><a href="privacy.html">プライバシーポリシー</a></li>
+        <li><a href="terms.html">利用規約</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2025 みらチェケ</p>
+  </footer>
 
   <script src="script.js"></script>
+  
 </body>
 </html>

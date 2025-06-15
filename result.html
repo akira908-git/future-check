@@ -1,24 +1,54 @@
-<!-- result.html -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>未来診断結果</title>
+  <title>未来の健康診断結果</title>
   <link rel="stylesheet" href="result.css" />
 </head>
 <body>
-  <div class="result-container">
-    <h1 class="result-title">AI診断：変わりゆく身体</h1>
-    <div class="result-image-frame">
-      <img src="images/future_you.png" alt="未来の自分" class="result-image" />
-    </div>
-    <p class="result-comment">このままだと未来がヤバいかも…？<br>今日の意識が1年後を変える！</p>
-    <div class="result-buttons">
-      <button onclick="retry()">もう一度診断</button>
-      <button onclick="share()">SNSでシェア</button>
-    </div>
+<header>
+  <div class="logo">🌟 みらチェケ 〜みらいのカラダちぇっく〜</div>
+  <nav>
+    <ul>
+        <li><a href="index.html">TOP</a></li>
+        <li><a href="questions.html">診断テスト</a></li>
+        <li><a href="result.html">あなたの結果</a></li>
+      </ul>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>10年後のあなたの姿</h1>
+
+  <div id="resultBox">
+    <p>結果を読み込み中…</p>
   </div>
-  <script src="result.js"></script>
+
+  <!-- 動的に解説を入れる場所だけ空に -->
+  <div id="insightsContainer" class="insights">
+    <!-- JSで4つの解説をここに入れる -->
+  </div>
+
+  <button onclick="location.href='index.html'">もう一度チェック</button>
+</div>
+
+<p class="disclaimer">
+    ※ 本アンケートは健康に関する自己評価を目的としたものであり、診断や治療を目的としたものではありません。<br />
+    健康に関する具体的な相談や診断は、医療機関の専門家にご相談ください。
+  </p>
+
+<!-- フッター -->
+  <footer>
+    <nav>
+      <ul class="footer-links">
+        <li><a href="privacy.html">プライバシーポリシー</a></li>
+        <li><a href="terms.html">利用規約</a></li>
+      </ul>
+    </nav>
+    <p>&copy; 2025 みらチェケ</p>
+  </footer>
+
+<script src="result.js"></script>
 </body>
 </html>
