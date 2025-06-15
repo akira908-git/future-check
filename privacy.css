@@ -1,122 +1,207 @@
-/* フォントと全体のベース設定 */
+/* 基本設定 */
 body {
-  font-family: "Helvetica Neue", "Hiragino Kaku Gothic ProN", "Arial", sans-serif;
-  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
-  color: #333;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #f0f8ff;
+  line-height: 1.6;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* ヘッダー */
 header {
-  background-color: #2e8b57; /* 落ち着いた健康グリーン */
-  color: #fff;
-  padding: 1.2rem 1.5rem;
+  background-color: #111;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 10px rgba(0, 255, 255, 0.2);
+  flex-shrink: 0;
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  user-select: none;
-  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.15));
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00ffff;
 }
 
+/* ナビゲーション */
 nav ul {
   list-style: none;
   display: flex;
-  gap: 24px;
-  margin: 0;
+  gap: 1.5rem;
   padding: 0;
+  margin: 0;
 }
 
 nav a {
-  text-decoration: none;
-  color: #e0f2f1;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-nav a:hover,
-nav a:focus {
-  color: #a7ffeb;
-  outline: none;
-}
-
-/* メインコンテナ */
-.container {
-  max-width: 600px;
-  background: #ffffffdd;
-  margin: 30px auto 60px;
-  padding: 30px 30px 40px;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-/* 見出し */
-h2 {
-  font-size: 2rem;
-  color: #2a6ebb;
-  margin-bottom: 1rem;
-  border-bottom: 3px solid #2a6ebb;
-  padding-bottom: 0.3rem;
-}
-
-h3 {
-  font-size: 1.3rem;
-  color: #2a6ebb;
-  margin-top: 1.5rem;
-  margin-bottom: 0.8rem;
-}
-
-/* 段落 */
-p {
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  color: #444;
-}
-
-/* リストがある場合 */
-ul {
-  margin-left: 1.5rem;
-  margin-bottom: 1rem;
-  list-style-type: disc;
-  color: #555;
-}
-
-footer {
-  background-color: #2a6ebb;
   color: #fff;
-  padding: 15px 20px;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #00ffff;
+  transition: width 0.3s ease-in-out;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+  width: 100%;
+}
+
+/* メインセクション */
+#terms-of-service {
+  background-color: #ffffffdd; /* 少し透明感のある白 */
+  color: #111;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#terms-of-service h2,
+#terms-of-service h3 {
+  color: #0066cc;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
-  margin-top: 50px;
-  font-size: 0.9rem;
-  border-radius: 0 0 8px 8px;
+  display: block;   /* ブロック要素にして確実に幅いっぱい */
+  width: 100%;      /* 幅100%にすることで中央揃えが明確になる */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+#terms-of-service p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* フッター */
+footer {
+  background-color: #111;
+  padding: 1rem 2rem;
+  text-align: center;
+  color: #888;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  margin-top: auto;
 }
 
 .footer-links {
-  list-style: none;
-  margin-bottom: 8px;
-  padding: 0;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0.5rem;
 }
 
-.footer-links li a {
-  color: #fff;
+.footer-links a {
+  color: #00ffff;
   text-decoration: none;
-  font-weight: 600;
 }
 
-.footer-links li a:hover {
+.footer-links a:hover,
+.footer-links a:focus {
   text-decoration: underline;
 }
+
+/* ----------------
+   レスポンシブ対応
+-------------------*/
+
+/* タブレット〜スマホ(900px以下) */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  nav ul {
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  #terms-of-service {
+    margin: 1rem 1.5rem;
+    padding: 1.5rem;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: none;
+  }
+}
+
+/* スマホ(600px以下) */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+  }
+
+  footer {
+    font-size: 0.75rem;
+    padding: 1rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* パソコン大画面用(1200px以上) */
+@media (min-width: 1201px) {
+  #terms-of-service {
+    max-width: 900px;
+    padding: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+   h3 {
+    font-size: 1.25rem;
+  }
+} /* ←この直後に全角スペースを入れない */
 

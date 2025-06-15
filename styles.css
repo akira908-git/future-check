@@ -3,12 +3,17 @@ body {
     font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Futuristic gradient */
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
     color: #f0f8ff;
     line-height: 1.6;
-    min-height: 100vh; /* Ensure body takes full viewport height */
+    min-height: 100vh;
     display: flex;
-    flex-direction: column; /* For sticky footer */
+    flex-direction: column;
+    font-size: 16px;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* Header Styling */
@@ -19,7 +24,7 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 10px rgba(0, 255, 255, 0.2);
-    flex-shrink: 0; /* Prevent header from shrinking */
+    flex-shrink: 0;
 }
 
 .logo {
@@ -40,13 +45,13 @@ nav a {
     color: #ffffff;
     text-decoration: none;
     position: relative;
-    padding-bottom: 5px; /* Space for underline */
+    padding-bottom: 5px;
 }
 
 nav a::after {
     content: '';
     position: absolute;
-    bottom: 0; /* Align with bottom of padding */
+    bottom: 0;
     left: 0;
     width: 0;
     height: 2px;
@@ -60,20 +65,20 @@ nav a:hover::after {
 
 /* Hero Section Styling */
 .hero {
-    flex-grow: 1; /* Allows hero section to take up available space */
+    flex-grow: 1;
     display: flex;
-    flex-direction: row; /* Default for larger screens */
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     padding: 4rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 40px; /* Space between text and image */
+    gap: 40px;
 }
 
 .hero-text {
     text-align: left;
-    max-width: 50%; /* Adjust as needed */
+    max-width: 50%;
 }
 
 .hero-text h1 {
@@ -91,8 +96,8 @@ nav a:hover::after {
 }
 
 .hero-image {
-    max-width: 45%; /* Adjust as needed */
-    display: flex; /* To center the image if smaller than its container */
+    max-width: 45%;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -106,27 +111,27 @@ nav a:hover::after {
 }
 
 .hero-image img:hover {
-    transform: translateY(-5px); /* Subtle lift on hover */
+    transform: translateY(-5px);
 }
-
 
 /* Button Styling */
 button {
     background-color: #00ffff;
     color: #000;
     border: none;
-    padding: 1rem 2.5rem; /* Larger padding for hero button */
+    padding: 1rem 2.5rem;
     border-radius: 30px;
-    font-size: 1.2rem; /* Larger font for hero button */
+    font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
     box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+    touch-action: manipulation;
 }
 
 button:hover {
     background-color: #00cccc;
-    transform: translateY(-3px); /* Subtle lift on hover */
+    transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 255, 255, 0.4);
 }
 
@@ -137,8 +142,8 @@ button:hover {
     margin: 2rem auto;
     max-width: 800px;
     text-align: center;
-    padding: 0 1rem; /* Add padding for small screens */
-    flex-shrink: 0; /* Prevent disclaimer from shrinking */
+    padding: 0 1rem;
+    flex-shrink: 0;
 }
 
 /* Footer Styling */
@@ -148,8 +153,8 @@ footer {
     text-align: center;
     color: #888;
     font-size: 0.85rem;
-    flex-shrink: 0; /* Prevent footer from shrinking */
-    margin-top: auto; /* Push footer to the bottom */
+    flex-shrink: 0;
+    margin-top: auto;
 }
 
 .footer-links {
@@ -173,14 +178,15 @@ footer {
 /* Responsive Adjustments */
 @media (max-width: 900px) {
     .hero {
-        flex-direction: column; /* Stack text and image on smaller screens */
+        flex-direction: column;
         text-align: center;
         padding: 3rem 1.5rem;
         gap: 30px;
     }
 
-    .hero-text, .hero-image {
-        max-width: 100%; /* Allow them to take full width */
+    .hero-text,
+    .hero-image {
+        max-width: 100%;
     }
 
     .hero-text h1 {
@@ -193,6 +199,10 @@ footer {
 }
 
 @media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
     header {
         flex-direction: column;
         padding: 0.8rem 1rem;
@@ -201,20 +211,25 @@ footer {
     .logo {
         font-size: 1.3rem;
         margin-bottom: 0.5rem;
+        text-align: center;
     }
 
     nav ul {
         flex-wrap: wrap;
         justify-content: center;
         gap: 1rem;
+        padding: 0.5rem 0;
     }
 
     nav a {
-        font-size: 0.9rem;
+        font-size: 1rem;
+        padding: 0.3rem 0.5rem;
     }
 
     .hero {
         padding: 2rem 1rem;
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
     .hero-text h1 {
@@ -225,18 +240,34 @@ footer {
         font-size: 1rem;
     }
 
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+    }
+
     button {
-        padding: 0.8rem 2rem;
+        padding: 0.9rem 2rem;
         font-size: 1rem;
+        width: 90%;
+        max-width: 300px;
+        margin: 0 auto;
     }
 
     .disclaimer {
         font-size: 0.8rem;
         margin: 1.5rem auto;
+        padding: 0 1rem;
     }
 
     .footer-links {
         flex-direction: column;
         gap: 0.5rem;
+        text-align: center;
+    }
+
+    footer {
+        font-size: 0.8rem;
     }
 }

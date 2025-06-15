@@ -3,7 +3,7 @@ body {
     font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #0f2027, #203a43, #2c5364); /* Futuristic gradient */
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
     color: #f0f8ff;
     line-height: 1.6;
 }
@@ -85,7 +85,7 @@ h1 {
 }
 
 #resultBox img {
-    max-width: 80%; /* Adjusted for better responsiveness */
+    max-width: 80%;
     height: auto;
     border-radius: 12px;
     margin-top: 15px;
@@ -102,7 +102,7 @@ h1 {
 .unique-name {
     font-size: 1.5em;
     font-weight: bold;
-    color: #ffcc00; /* A distinct color for the unique name */
+    color: #ffcc00;
 }
 
 /* Insights Container Styling */
@@ -124,7 +124,7 @@ h1 {
     border-left: 5px solid #00ffff;
     border-radius: 8px;
     margin-bottom: 25px;
-    white-space: pre-line; /* Preserves line breaks from JS string */
+    white-space: pre-line;
     line-height: 1.8;
 }
 
@@ -156,7 +156,7 @@ h1 {
 
 .advice-section li {
     background-color: rgba(0, 0, 0, 0.3);
-    border-left: 3px solid #ffcc00; /* Accent color for list items */
+    border-left: 3px solid #ffcc00;
     padding: 1rem;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -165,11 +165,11 @@ h1 {
 }
 
 .advice-section li strong {
-    color: #ffcc00; /* Make question titles stand out */
+    color: #ffcc00;
     font-size: 1.1em;
 }
 
-/* Button Styling (if any were present, keeping for consistency) */
+/* Button Styling */
 button {
     background-color: #00ffff;
     color: #000;
@@ -179,7 +179,7 @@ button {
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s, transform 0.2s;
-    margin-top: 20px; /* Added margin for spacing */
+    margin-top: 20px;
 }
 
 button:hover {
@@ -226,30 +226,57 @@ footer {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .container {
-        margin: 1.5rem auto;
-        padding: 1.5rem;
+        margin: 1rem auto;
+        padding: 1rem;
     }
 
     header {
         flex-direction: column;
-        padding: 1rem;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .logo {
+        margin-bottom: 0.5rem;
     }
 
     nav ul {
-        margin-top: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0;
     }
 
     #resultBox img {
-        max-width: 95%;
+        max-width: 100%;
     }
 
     #resultBox h2 {
         font-size: 1.5em;
     }
 
-    .insight p, .advice-section li {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .insight p,
+    .advice-section li {
         font-size: 1em;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.1rem;
     }
 }
